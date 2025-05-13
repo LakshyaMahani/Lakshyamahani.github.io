@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asymmetric-RSA Cryptography Simulator</title>
+    <link rel="stylesheet" href="../styles/asymmetric_rsa.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="../images/homepagelogo.jpeg" alt="Website Logo" />
+      <h1>Cryptography Virtual LAB</h1>
+      <nav>
+        <button id="homeBtn">Home</button>
+        <button id="aboutBtn">About Us</button>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <h2>Navigation</h2>
+        <div class="nav-item selected">
+          <button href="#" data-content="aim">Aim</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="theory">Theory</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="procedure">Procedure</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="simulation">Simulation</button>
+        </div>
+      </aside>
+      <section id="contentArea">
+        <div class="content" id="aim">
+          <p>In this experiment, you are asked to encrypt long messages using various modes of operation wherein a block cipher (in this case, RSA) is provided to you .</p>
+        </div>
+        <div class="content" id="theory">
+          <h2>RSA Encryption Algorithm</h2>
+          <p>RSA encryption algorithm is a type of public-key encryption algorithm. To better understand RSA, lets first understand what is public-key encryption algorithm.</p>
+          <h3>Public key encryption algorithm:</h3>
+          <p>Public Key encryption algorithm is also called the Asymmetric algorithm. Asymmetric algorithms are those algorithms in which sender and receiver use different keys for encryption and decryption. Each sender is assigned a pair of keys:</p>
+          <ol>
+            <li><b>Public Key</b></li>
+            <li><b>Private Key</b></li>
+          </ol>
+          <p>The <b>Public key</b> is used for encryption, and the <b>Private Key</b> is used for decryption. Decryption cannot be done using a public key. The two keys are linked, but the private key cannot be derived from the public key. The public key is well known, but the private key is secret and it is known only to the user who owns the key. It means that everybody can send a message to the user using user's public key. But only the user can decrypt the message using his private key.</p>
+          <h3>The Public key algorithm operates in the following manner:</h3>
+          <img src="../images/asymmetricimg1.png" alt="RSA Algo"/>
+        </div>
+        <div class="content" id="procedure">
+          <h2>Procedure</h2>
+          <h4>Part - 1</h4>
+          <ol>
+            <li><p>Enter a message that need to be encrypted.</p></li>
+            <li><p>Click the <b>Generate Public Key</b> button to generate a public key for encryption at sender's end.</p></li>
+            <li><p>Click the <b>Generate Private Key</b> button to generate a private key for decryption at reciever's end.</p></li>
+          </ol>
+          <h4>Part - 2</h4>
+          <ol>
+            <li><p>Click the <b>Encrypt Message (Using Public Key)</b> button to generate an encrypted message using the provided message in the Part - 1 and this encrypted message will be sent to the reciever.</p></li>
+            <li><p>Click the <b>Decrypt Message (Using Private Key)</b> button to decrypt the encrypted message which was sent by the reciever.</p></li>
+          </ol>
+          <h4>Part - 3(Conclusion)</h4>
+          <p>As we can see that our Original message and Decrypted message is same then we can assume that the message is not tampered in between.</p>
+        </div>
+        <div class="content" id="simulation">
+          <h2>Asymmetric Cryptography Simulator</h2>
+          <div id="message-parent">
+            <div class="message-container">
+              <label for="message">Enter your message:</label>
+              <textarea id="message" rows="5" cols="50"></textarea>
+              <div id="buttongroup1">
+                <button id="genPublicKey">Generate Public Key</button>
+                <button id="genPrivateKey">Generate Private Key</button>
+                <button id="clearAll">Clear All</button>
+              </div>
+              <div class="keyDiv">
+                <label for="publicKey">Public Key:</label>
+                <textarea id="publicKey" rows="5" cols="50" style="margin-top: 8px;" disabled="true"></textarea>
+                <br>
+                <button id="encPublicKey">Encrypt Message (Using Public Key)</button>
+              </div>
+              <div class="keyDiv">
+                <label for="privateKey">Private Key:</label>
+                <textarea id="privateKey" rows="5" cols="50" style="margin-top: 8px;" disabled="true"></textarea>
+                <br>
+                <button id="decPrivateKey">Decrypt Message (Using Private Key)</button>
+              </div>
+            </div>
+            <div class="message-container">
+              <div class="messageDiv">
+                <label for="encryptedMessage">Encrypted Message:</label>
+                <textarea id="encryptedMessage" rows="5" cols="50" style="margin-top: 8px;" disabled="true"></textarea>
+                <br>
+                <label for="encryptedMessage64">Encrypted Message(Base 64):</label>
+                <textarea id="encryptedMessage64" rows="5" cols="50" style="margin-top: 8px;" disabled="true"></textarea>
+                <br>
+                <label for="decryptedMessage">Decrypted Message:</label>
+                <textarea id="decryptedMessage" rows="5" cols="50" style="margin-top: 8px;" disabled="true"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Lakshya Mahani</p>
+    </footer>
+    <script src="../scripts/asymmetric_rsa.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptography Virtual LAB</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="../images/homepagelogo.jpeg" alt="Website Logo" />
+      <h1>Cryptography Virtual LAB</h1>
+      <nav>
+        <button id="homeBtn">Home</button>
+        <button id="aboutBtn">About Us</button>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <h2>Navigation</h2>
+        <div class="nav-item selected">
+          <button href="#" data-content="introduction">Introduction</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="cryptography">What is Cryptography?</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="cryptographyTypes">Cryptography Types</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="symmetricCryptography">Symmetric Cryptography</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="asymmetricCryptography">Asymmetric Cryptography</button>
+        </div>
+        <div class="nav-item">
+          <button href="#" data-content="simulator">Simulator</button>
+        </div>
+      </aside>
+      <section id="contentArea">
+        <div class="content" id="introduction">
+          <h1>Welcome to the Cryptography Virtual Lab!</h1>
+          <p>
+            Have you ever wanted to send secret messages or ensure your online
+            information stays secure? Cryptography is the art of protecting
+            information and is a fundamental part of cybersecurity.
+          </p>
+
+          <p>In this virtual lab, you'll embark on a hands-on journey to:</p>
+
+          <ul>
+            <li>Understand the core concepts of cryptography.</li>
+            <li>Experiment with different encryption techniques.</li>
+            <li>Gain practical experience with real-world applications.</li>
+          </ul>
+
+          <p>
+            Get ready to unlock the secrets of cryptography and become a master
+            of secure communication!
+          </p>
+        </div>
+        <div class="content" id="cryptography">
+          <h1>Welcome to the Cryptography Virtual Lab!</h1>
+          <p>Cryptography is technique of securing information and communications through use of codes so that only those person for whom the information is intended can understand it and process it. Thus preventing unauthorized access to information. The prefix “crypt” means “hidden” and suffix “graphy” means “writing”. In Cryptography the techniques which are use to protect information are obtained from mathematical concepts and a set of rule based calculations known as algorithms to convert messages in ways that make it hard to decode it. These algorithms are used for cryptographic key generation, digital signing, verification to protect data privacy, web browsing on internet and to protect confidential transactions such as credit card and debit card transactions.</p>
+          <p>Techniques used For Cryptography: In today’s age of computers cryptography is often associated with the process where an ordinary plain text is converted to cipher text which is the text made such that intended receiver of the text can only decode it and hence this process is known as encryption. The process of conversion of cipher text to plain text this is known as decryption.</p>
+          <h3><b>Features Of Cryptography are as follows:</b></h3>
+          <ol>
+            <li><b>Confidentiality</b>: Information can only be accessed by the person for whom it is intended and no other person except him can access it.</li>
+            <li><b>Integrity</b>: Information cannot be modified in storage or transition between sender and intended receiver without any addition to information being detected.</li>
+            <li><b>Non-repudiation</b>: The creator/sender of information cannot deny his intention to send information at later stage.</li>
+            <li><b>Authentication</b>: The identities of sender and receiver are confirmed. As well as destination/origin of information is confirmed.</li>
+          </ol>
+        </div>
+        <div class="content" id="cryptographyTypes">
+          <h1>Types of Cryptography</h1>
+          <h3><b>Types Of Cryptography</b>: In general there are 3 types Of cryptography:</h3>
+          <ol>
+            <li><b>Symmetric Key Cryptography:</b> It is an encryption system where the sender and receiver of message use a single common key to encrypt and decrypt messages. Symmetric Key Systems are faster and simpler but the problem is that sender and receiver have to somehow exchange key in a secure manner. The most popular symmetric key cryptography system are Data Encryption System(DES) and Advanced Encryption System(AES).</li>
+            <li><b>Asymmetric Key Cryptography:</b> Under this system a pair of keys is used to encrypt and decrypt information. A receiver’s public key is used for encryption and a receiver’s private key is used for decryption. Public key and Private Key are different. Even if the public key is known by everyone the intended receiver can only decode it because he alone know his private key. The most popular asymmetric key cryptography algorithm is RSA algorithm.</li>
+            <li><b>Hash Functions:</b> There is no usage of any key in this algorithm. A hash value with fixed length is calculated as per the plain text which makes it impossible for contents of plain text to be recovered. Many operating systems use hash functions to encrypt passwords.</li>
+          </ol>
+        </div>
+        <div class="content" id="symmetricCryptography">
+          <h1>Symmetric Cryptography</h1>
+          <p><b>Symmetric cryptography</b>, known also as secret key cryptography, is the use of a single shared secret to share encrypted data between parties. Ciphers in this category are called symmetric because you use the same key to encrypt and to decrypt the data. In simple terms, the sender encrypts data using a password, and the recipient must know that password to access the data.Symmetric encryption is a two-way process. With a block of plaintext and a given key, symmetric ciphers will always produce the same ciphertext. Likewise, using that same key on that block of ciphertext will always produce the original plaintext. Symmetric encryption is useful for protecting data between parties with an established shared key and is also frequently used to store confidential data. For example, ASP.NET uses 3DES to encrypt cookie data for a forms authentication ticket.</p>
+          <div>
+            <img src="../images/symmetricimg1.jpeg"/>
+          </div>
+        </div>
+        <div class="content" id="asymmetricCryptography">
+          <h1>Asymmetric Cryptography</h1>
+          <p>Asymmetric cryptography, also known as public key cryptography, is a process that uses a pair of related keys -- one public key and one private key -- to encrypt and decrypt a message and protect it from unauthorized access or use.</p>
+          <p>A public key is a cryptographic key a person can use to encrypt a message so it can only be decrypted by the intended recipient with their private key. A private key -- also known as a secret key -- is shared only with the key's initiator.
+          When someone wants to send an encrypted message, they pull the intended recipient's public key from a public directory and use it to encrypt the message before sending it. The recipient of the message can decrypt the message using their related private key. If the sender encrypts the message using their private key, the message can be decrypted only using that sender's public key, thus authenticating the sender. These encryption and decryption processes happen automatically; users do not need to physically lock and unlock the message. Many protocols rely on asymmetric cryptography, including Transport Layer Security (TLS) and Secure Sockets Layer(SSL), which make HTTPS possible. The encryption process is also used in software programs that need to establish a secure connection over an insecurenetwork, such as web browsers, or that need to validate a digital signature. Increased data security is the primary benefit of asymmetric cryptography. It is the most secure encryption processbecause users are never required to reveal or share their private keys, decreasing the chances of a cybercriminaldiscovering a user's private key during transmission.</p>
+          <div>
+            <img src="../images/asymmetricimg1.png" style="width: 60vh; height: auto;"/>
+          </div>
+        </div>
+        <div class="content" id="simulator">
+          <h1>Simulator</h1>
+          <h3>Kindly select the algorithm to simulate:</h3>
+          <div class="links">
+            <a href="../pages/symmetric_des.html">Symmetric Cryptography - DES</a>
+            <a href="../pages/symmetric_aes.html">Symmetric Cryptography - AES</a>
+            <a href="../pages/asymmetric_rsa.html">Asymmetric Cryptography - RSA</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Lakshya Mahani</p>
+    </footer>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
