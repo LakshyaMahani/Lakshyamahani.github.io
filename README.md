@@ -20,6 +20,6 @@
 2. **Web Server (Optional):** If you intend to host the virtual lab online, you'll need a web server like Apache, Nginx, or a hosting provider.
 
 **Running the Project Locally:**
-
+https://lakshyamahani.github.io/
 
 2. Open the index.html file in a web browser to launch the virtual lab.
