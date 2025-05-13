@@ -21,9 +21,5 @@
 
 **Running the Project Locally:**
 
-1. Clone this repository to your local machine using Git:
-
-   ```bash
-   git clone https://github.com/priyank1609/Minor-Project.git
 
 2. Open the index.html file in a web browser to launch the virtual lab.
